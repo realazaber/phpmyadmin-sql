@@ -5,12 +5,12 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: formsphere
-      MYSQL_DATABASE: formsphere
-      MYSQL_USER: formsphere
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: dbname
+      MYSQL_USER: username
 
       #Keep this same as root password
-      MYSQL_PASSWORD: formsphere
+      MYSQL_PASSWORD: rootpassword
     ports:
       - "3306:3306"
     volumes:
@@ -22,7 +22,7 @@ services:
     restart: always
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: formsphere
+      MYSQL_ROOT_PASSWORD: rootpassword
     ports:
       - "8080:80"
 
